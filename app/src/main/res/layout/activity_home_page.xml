@@ -4,33 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".HomePageActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="122dp"
-        android:text="Welcome to Equilibrium! " />
+        android:layout_marginTop="77dp"
+        android:text="Welcome User" />
 
     <Button
-        android:id="@+id/logIn_btn"
-        android:layout_width="300dp"
+        android:id="@+id/goToCalendarButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="131dp"
-        android:background="@color/colorTeal"
-        android:text="Log In"
-        android:textColor="#FFFF" />
-
-    <ImageView
-        android:layout_width="125dp"
-        android:layout_height="112dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
-        android:src="@drawable/icon" />
+        android:layout_marginTop="124dp"
+        android:text="Calendar" />
 
+    <Button
+        android:id="@+id/goToTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="217dp"
+        android:text="Today's Tasks" />
 </android.widget.RelativeLayout>
