@@ -16,20 +16,51 @@
         android:text="Welcome User" />
 
     <Button
-        android:id="@+id/goToCalendarButton"
+        android:id="@+id/goToGoalsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="124dp"
-        android:text="Calendar" />
+        android:onClick="goToAddGoals"
+        android:text="Create Goal" />
 
     <Button
-        android:id="@+id/goToTaskButton"
+        android:id="@+id/createEventBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="217dp"
-        android:text="Today's Tasks" />
+        android:layout_marginTop="190dp"
+        android:onClick="createEvent"
+        android:text="Create Event" />
+
+    <Button
+        android:id="@+id/viewScheduleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="viewSchedule"
+        android:text="View Schedule" />
+
+    <Button
+        android:id="@+id/ProgressBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="185dp"
+        android:onClick="showProgress"
+        android:text="Show My Progress" />
+
+    <Button
+        android:id="@+id/wellBeingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="115dp"
+        android:onClick="wellBeing"
+        android:text="Reflect My Well Being" />
+
 </android.widget.RelativeLayout>

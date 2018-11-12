@@ -31,6 +31,8 @@
         <activity android:name=".HomePageActivity" />
         <activity android:name=".calendarView" />
         <activity android:name=".addEvent" />
+        <activity android:name=".AddGoalActivity" />
+        <activity android:name=".ViewGoalsActivity"></activity>
     </application>
 
 </manifest>

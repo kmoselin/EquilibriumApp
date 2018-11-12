@@ -93,6 +93,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String email = loginEmail.getText().toString();
+                String password = loginPassword.getText().toString();
+
+                if(TextUtils.isEmpty(email)){
+                    Toast.makeText(getApplicationContext(),"Please fill in the required fields",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(TextUtils.isEmpty(password)){
+                    Toast.makeText(getApplicationContext(),"Please fill in the required fields",Toast.LENGTH_SHORT).show();
+                }
                 Intent intent = new Intent(LoginActivity.this,HomePageActivity.class);
                 startActivity(intent);
             }
