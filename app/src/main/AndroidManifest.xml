@@ -33,8 +33,13 @@
         <activity android:name=".addEvent" />
         <activity android:name=".AddGoalActivity" />
         <activity android:name=".ViewGoalsActivity" />
+<<<<<<< HEAD
         <activity android:name=".ViewSchedule" />
         <activity android:name=".SelfReflection"></activity>
+=======
+        <activity android:name=".ViewSchedule"></activity>
+        <activity android:name=".timer"></activity>
+>>>>>>> 3463d1d76b66a0bb94737177c15fee5031118d08
     </application>
 
 </manifest>
