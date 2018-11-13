@@ -59,5 +59,14 @@
         android:layout_marginBottom="97dp"
         android:onClick="wellBeing"
         android:text="Reflect My Well Being" />
+    <Button
+        android:id="@+id/timerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:onClick="viewTimer"
+        android:text="View Timer" />
 
 </android.widget.RelativeLayout>

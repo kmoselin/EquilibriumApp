@@ -54,4 +54,9 @@ public class HomePageActivity extends AppCompatActivity {
         Intent intent = new Intent(this, calendarView.class);
         startActivity(intent);
     }
+
+    public void viewTimer(View view) {
+        Intent intent = new Intent(this, timer.class);
+        startActivity(intent);
+    }
 }

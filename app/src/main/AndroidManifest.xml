@@ -34,6 +34,7 @@
         <activity android:name=".AddGoalActivity" />
         <activity android:name=".ViewGoalsActivity" />
         <activity android:name=".ViewSchedule"></activity>
+        <activity android:name=".timer"></activity>
     </application>
 
 </manifest>
