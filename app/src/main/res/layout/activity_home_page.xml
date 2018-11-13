@@ -1,72 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePageActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".HomePageActivity"
+    android:background="#FFD375"
+    >
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp"
         android:text="Welcome User" />
 
     <Button
         android:id="@+id/goToGoalsBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="237dp"
         android:onClick="goToAddGoals"
+        android:background="#FFFFFF"
         android:text="Create Goal" />
 
     <Button
         android:id="@+id/createEventBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="151dp"
         android:onClick="viewCalendar"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+
         android:text="View Calendar" />
 
 
     <Button
         android:id="@+id/ProgressBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="187dp"
         android:onClick="showProgress"
+        android:background="#FFFFFF"
+        android:layout_marginTop="20dp"
         android:text="Show My Progress" />
 
     <Button
         android:id="@+id/wellBeingBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="97dp"
         android:onClick="wellBeing"
+        android:background="#FFFFFF"
+        android:layout_marginTop="20dp"
         android:text="Reflect My Well Being" />
+
     <Button
         android:id="@+id/timerBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp"
         android:onClick="viewTimer"
+        android:background="#FFFFFF"
+        android:layout_marginTop="20dp"
         android:text="View Timer" />
 
-</android.widget.RelativeLayout>
+
+
+</LinearLayout>

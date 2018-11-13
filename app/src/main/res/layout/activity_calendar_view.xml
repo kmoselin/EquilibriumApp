@@ -9,9 +9,8 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="396dp"
-        android:layout_height="312dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="357dp"
 
         android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Headline"
         tools:dateTextAppearance="@style/TextAppearance.AppCompat.Large"
@@ -21,21 +20,22 @@
         />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
+        android:id="@+id/button3"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/colorTeal"
-        android:onClick="gotoEvent"
-        android:text="Add Event" />
+        android:background="@color/materialOrange"
+        android:onClick="gotoSchedule"
+        android:layout_gravity="center"
+        android:text="View Schedule" />
 
     <Button
-        android:id="@+id/button3"
-        android:background = "@color/colorTeal"
-        android:layout_width="match_parent"
+        android:id="@+id/button2"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="View Schedule"
-        android:onClick = "gotoSchedule"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/materialOrange"
+        android:onClick="gotoEvent"
+        android:text="Add Event" />
 
 </android.widget.LinearLayout>

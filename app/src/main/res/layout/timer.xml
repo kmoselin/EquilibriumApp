@@ -27,6 +27,8 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:background="@color/materialOrange"
+
         android:text="Start" />
 
     <Button
@@ -35,6 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/startButton"
         android:layout_centerHorizontal="true"
+        android:background="@color/materialOrange"
+
         android:layout_marginTop="10dp"
         android:text="Stop" />
 
@@ -44,6 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/stopButton"
         android:layout_centerHorizontal="true"
+        android:background="@color/materialOrange"
+
         android:layout_marginTop="10dp"
         android:text="Restart" />
 

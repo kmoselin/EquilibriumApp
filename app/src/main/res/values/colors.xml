@@ -8,6 +8,6 @@
 
     <!-- colors for task priority selection from example code -->
     <color name="materialRed">#E74C3C</color>
-    <color name="materialOrange">#E67E22</color>
+    <color name="materialOrange">#FFB03A</color>
     <color name="materialYellow">#F1C40F</color>
 </resources>

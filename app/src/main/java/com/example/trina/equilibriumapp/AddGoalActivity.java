@@ -1,6 +1,5 @@
 package com.example.trina.equilibriumapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -62,20 +61,23 @@ public class AddGoalActivity extends AppCompatActivity {
         String Completed = "Not completed";
         if(goalInput.matches("")){
             Toast.makeText(this, "Enter your goal!", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         if(type.matches("")){
             Toast.makeText(this, "Enter type of goal", Toast.LENGTH_SHORT).show();
+            return;
         }
         if(pr.matches("Not Specified")){
             Toast.makeText(this, "Specify priority", Toast.LENGTH_SHORT).show();
+            return;
         }
 
-        else{
-            db.insertGoal(goalInput, type, pr, Completed);
-            Toast.makeText(this, "Goal added!", Toast.LENGTH_SHORT).show();
-            finish();
-        }
+
+        db.insertGoal(goalInput, type, pr, Completed);
+        Toast.makeText(this, "Goal added!", Toast.LENGTH_SHORT).show();
+        finish();
+
 
 
 
