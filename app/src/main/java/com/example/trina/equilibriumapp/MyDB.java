@@ -74,6 +74,21 @@ public class MyDB extends SQLiteOpenHelper{
         }
         Toast.makeText(ctx, sr.toString(), Toast.LENGTH_LONG).show();
     }
+
+
+    public Cursor getAllEvents(){
+        db = getWritableDatabase();
+
+        Cursor cr = db.rawQuery("select * from " + TABLE_EVENT + ";", null );
+        return cr;
+    }
+
+    public Cursor getAllGoals(){
+        db = getWritableDatabase();
+        Cursor cr = db.rawQuery("select * from " + TABLE_GOAL + ";", null );
+        return cr;
+    }
+
     public void delete(String s){
         db = getWritableDatabase();
         db.delete(TABLE_EVENT, "first_name = ?", new String[]{s});

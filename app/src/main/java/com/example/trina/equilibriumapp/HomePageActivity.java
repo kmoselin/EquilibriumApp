@@ -36,18 +36,14 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
 
-
-    public void viewSchedule(View view) {
-        Intent intent = new Intent(this, ViewSchedule.class);
-        startActivity(intent);
-    }
-
     public void showProgress(View view) {
-        Intent intent = new Intent(this, ViewGoalsActivity.class);
-        startActivity(intent);
+        Intent prog = new Intent(this, ViewGoalsActivity.class);
+        startActivity(prog);
     }
 
     public void wellBeing(View view) {
+        Intent schedge = new Intent(this, SelfReflection.class);
+        startActivity(schedge);
     }
 
     public void viewCalendar(View view) {
