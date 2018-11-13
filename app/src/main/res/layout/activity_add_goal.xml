@@ -24,6 +24,14 @@
         android:paddingBottom="@dimen/activity_horizontal_margin" />
 
     <!-- TextView and FrameLayout (which contains buttons) for Priority Selection -->
+    <EditText
+        android:id="@+id/typeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="What type of goal?"
+        android:inputType="text" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -42,4 +42,11 @@ public class calendarView extends AppCompatActivity {
     public DatePicker getPickDate() {
         return pickDate;
     }
+
+    public void gotoSchedule(View view) {
+
+        Intent intent = new Intent(this, ViewSchedule.class);
+        intent.putExtra("date", date);
+        startActivity(intent);
+    }
 }

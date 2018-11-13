@@ -14,16 +14,16 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
 //        calendarButton = findViewById(R.id.goToCalendarButton);
-//        todaysTask = findViewById(R.id.goToTaskButton);
-//
-//        //navigates to calendarView
-//        calendarButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(HomePageActivity.this,calendarView.class);
-//                startActivity(intent);
-//            }
-//        });
+////        todaysTask = findViewById(R.id.goToTaskButton);
+////
+////        //navigates to calendarView
+////        calendarButton.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View v) {
+////                Intent intent = new Intent(HomePageActivity.this,calendarView.class);
+////                startActivity(intent);
+////            }
+////        });
 
 
 
@@ -35,17 +35,23 @@ public class HomePageActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void createEvent(View view) {
-        Intent intent = new Intent(HomePageActivity.this,CalendarView.class);
+
+
+    public void viewSchedule(View view) {
+        Intent intent = new Intent(this, ViewSchedule.class);
         startActivity(intent);
     }
 
-    public void viewSchedule(View view) {
-    }
-
     public void showProgress(View view) {
+        Intent intent = new Intent(this, ViewGoalsActivity.class);
+        startActivity(intent);
     }
 
     public void wellBeing(View view) {
+    }
+
+    public void viewCalendar(View view) {
+        Intent intent = new Intent(this, calendarView.class);
+        startActivity(intent);
     }
 }
