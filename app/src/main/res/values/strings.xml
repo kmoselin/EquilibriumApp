@@ -15,6 +15,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="minimum_password">Password is too short!</string>
+    <string name="auth_failed">Authentication Failed</string>
+
 
     <string name="add_goal_activity_name">Add a New Goal</string>
 
