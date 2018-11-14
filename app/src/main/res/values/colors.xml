@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#2e2f37</color>
     <color name="colorPrimaryLight">#C5CAE9</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorGrayLight">#9e9e9e</color>
+
+
+    <!--Theme colors-->
     <color name="colorTeal">#20ad93</color>
+    <color name="colorTealLight">#87ffe9</color>
+    <color name="colorTealDark">#0d6252</color>
+    <color name="colorBlue">#3f86b5</color>
+    <color name="colorDarkGray">#838383</color>
+    <color name="colorPrimaryGray">#5e6590</color>
+    <color name="LightOrange">#ffd364</color>
+
+
+
+
+
 
     <!-- colors for task priority selection from example code -->
-    <color name="materialRed">#E74C3C</color>
+    <color name="materialRed">#ed5a44</color>
     <color name="materialOrange">#FFB03A</color>
     <color name="materialYellow">#F1C40F</color>
 </resources>

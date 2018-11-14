@@ -22,35 +22,35 @@
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="@color/materialOrange"
-
+        android:background="@color/colorTeal"
+        android:textColor="@android:color/primary_text_dark"
         android:text="Start" />
 
     <Button
         android:id="@+id/stopButton"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/startButton"
         android:layout_centerHorizontal="true"
-        android:background="@color/materialOrange"
-
         android:layout_marginTop="10dp"
+        android:textColor="@android:color/primary_text_dark"
+        android:background="@color/colorBlue"
         android:text="Stop" />
 
     <Button
         android:id="@+id/restartButton"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/stopButton"
         android:layout_centerHorizontal="true"
-        android:background="@color/materialOrange"
-
         android:layout_marginTop="10dp"
+        android:textColor="@android:color/primary_text_dark"
+        android:background="@color/materialOrange"
         android:text="Restart" />
 
 
@@ -61,10 +61,9 @@
         android:layout_below="@+id/restartButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@color/colorTeal"
         android:gravity="center"
         android:padding="10dp"
-        android:textColor="@color/materialOrange"
+        android:textColor="@color/colorDarkGray"
         android:textStyle="bold" />
 
 </RelativeLayout>

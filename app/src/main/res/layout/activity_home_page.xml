@@ -10,7 +10,7 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".HomePageActivity"
-    android:background="#FFD375"
+
     >
 
 
@@ -18,53 +18,61 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Welcome User" />
 
-    <Button
-        android:id="@+id/goToGoalsBtn"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:onClick="goToAddGoals"
-        android:background="#FFFFFF"
-        android:text="Create Goal" />
 
     <Button
         android:id="@+id/createEventBtn"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorBlue"
         android:onClick="viewCalendar"
-        android:layout_marginTop="20dp"
-        android:background="#FFFFFF"
+        android:text="View Calendar"
+        android:textColor="@android:color/primary_text_dark" />
 
-        android:text="View Calendar" />
+
+    <Button
+        android:id="@+id/goToGoalsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToAddGoals"
+        android:background="@color/colorTeal"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/primary_text_dark"
+        android:text="Create Goal" />
 
 
     <Button
         android:id="@+id/ProgressBtn"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/materialOrange"
         android:onClick="showProgress"
-        android:background="#FFFFFF"
-        android:layout_marginTop="20dp"
-        android:text="Show My Progress" />
+        android:text="Show My Progress"
+        android:textColor="@android:color/primary_text_dark" />
 
     <Button
         android:id="@+id/wellBeingBtn"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorDarkGray"
         android:onClick="wellBeing"
-        android:background="#FFFFFF"
-        android:layout_marginTop="20dp"
-        android:text="Reflect My Well Being" />
+        android:text="Reflect My Well Being"
+        android:textColor="@android:color/primary_text_dark" />
 
     <Button
         android:id="@+id/timerBtn"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryGray"
         android:onClick="viewTimer"
-        android:background="#FFFFFF"
-        android:layout_marginTop="20dp"
-        android:text="View Timer" />
+        android:text="View Timer"
+        android:textColor="@android:color/primary_text_dark" />
 
 
 

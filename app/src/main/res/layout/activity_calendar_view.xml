@@ -21,20 +21,22 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/materialOrange"
-        android:onClick="gotoSchedule"
         android:layout_gravity="center"
+        android:background="@color/materialOrange"
+        android:textColor="@android:color/primary_text_dark"
+        android:onClick="gotoSchedule"
         android:text="View Schedule" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@color/materialOrange"
+        android:background="@color/colorPrimaryGray"
+        android:textColor="@android:color/primary_text_dark"
         android:onClick="gotoEvent"
         android:text="Add Event" />
 

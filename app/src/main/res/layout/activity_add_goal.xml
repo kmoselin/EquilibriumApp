@@ -58,33 +58,33 @@
 
             <Button
                 style="?android:attr/buttonBarButtonStyle"
-                android:textColor="@android:color/primary_text_light"
                 android:id="@+id/buttonP1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/materialRed"
+                android:textColor="@android:color/primary_text_dark"
                 android:text="@string/high_priority"
                 android:layout_weight="1"
                 android:onClick="onPrioritySelected"/>
 
             <Button
                 style="?android:attr/buttonBarButtonStyle"
-                android:textColor="@android:color/primary_text_light"
                 android:id="@+id/buttonP2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/materialOrange"
+                android:textColor="@android:color/primary_text_dark"
                 android:text="@string/med_priority"
                 android:layout_weight="1"
                 android:onClick="onPrioritySelected"/>
 
             <Button
                 style="?android:attr/buttonBarButtonStyle"
-                android:textColor="@android:color/primary_text_light"
                 android:id="@+id/buttonP3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/materialYellow"
+                android:textColor="@android:color/primary_text_dark"
                 android:text="@string/low_priority"
                 android:layout_weight="1"
                 android:onClick="onPrioritySelected"/>
@@ -130,7 +130,6 @@
     <!-- Add button -->
     <Button
         android:id="@+id/addButton"
-        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -138,5 +137,8 @@
         android:onClick="onClickAddGoal"
         android:text="Add Goal"
         android:textColor="@android:color/primary_text_dark" />
+
+    <!--style="@style/TextAppearance.AppCompat.Large"-->
+
 
 </LinearLayout>
