@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -35,28 +34,29 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //Get Firebase auth instance
-        auth = FirebaseAuth.getInstance();
+        //aut= FirebaseAuth.getInstance();
 
+        Log.d("wtf","Past input");
 
-        if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(LoginActivity.this, HomePageActivity.class));
-            finish();
-        }
+//        if (auth.getCurrentUser() != null) {
+//            startActivity(new Intent(LoginActivity.this, HomePageActivity.class));
+//            finish();
+//        }
 
         // set the view now
         setContentView(R.layout.activity_login);
 
-        loginEmail = findViewById(R.id.Email);
-
-        loginPassword = findViewById(R.id.Password);
-
-        loginButton = findViewById(R.id.loginButton);
-
-        registerButton = findViewById(R.id.registerButton);
-
-        signInButton = findViewById(R.id.sign_in_button);
-
-        newPassButton = findViewById(R.id.forgotPass_Button);
+//        loginEmail = findViewById(R.id.Email);
+//
+//        loginPassword = findViewById(R.id.Password);
+//
+//        loginButton = findViewById(R.id.loginButton);
+//
+//        registerButton = findViewById(R.id.registerButton);
+//
+//        signInButton = findViewById(R.id.sign_in_button);
+//
+//        newPassButton = findViewById(R.id.forgotPass_Button);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
@@ -88,16 +88,23 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("wtf","Past input");
+
                 String email = inputEmail.getText().toString();
                 final String password = inputPassword.getText().toString();
+                Log.d("wtf","Past input");
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    Log.d("wtf","Past input");
+
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    Log.d("wtf","Past input");
+
                     return;
                 }
                 Log.d("wtf","Past emptyCheck");

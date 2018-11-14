@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CalendarView;
 
 public class HomePageActivity extends AppCompatActivity {
 
@@ -55,4 +54,10 @@ public class HomePageActivity extends AppCompatActivity {
         Intent intent = new Intent(this, timer.class);
         startActivity(intent);
     }
+
+    public void logOut(View view) {
+
+    }
+
+
 }
