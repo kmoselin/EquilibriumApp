@@ -1,10 +1,11 @@
 package com.example.trina.equilibriumapp;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,11 @@ public class addEvent extends AppCompatActivity {
     EditText timeEnd;
     EditText priority;
 
+    Spinner hourStart;
+    Spinner hourEnd;
+
+    Spinner Start_ampm;
+    Spinner End_ampm;
     MyDB db;
 
     String date;
@@ -28,21 +34,28 @@ public class addEvent extends AppCompatActivity {
 
         dateText = findViewById(R.id.textView);
 
-       date = getIntent().getStringExtra("date");
-        if(!date.matches("")){
+        hourStart = findViewById(R.id.StartHour);
+        hourEnd = findViewById(R.id.EndHour);
+
+        Start_ampm = findViewById(R.id.ampm1);
+        End_ampm = findViewById(R.id.ampm2);
+
+        date = getIntent().getStringExtra("date");
+
+        dateText.setText(date);
+       /* if(!date.matches("")){
             dateText.setText(date);
         }
         else {
             dateText.setText("No date selected");
-        }
+        }*/
 
 
 
 
-        timeStart = findViewById(R.id.startTime);
-        timeEnd = findViewById(R.id.endTime);
+
         event = findViewById(R.id.Event);
-        priority = findViewById(R.id.Priority);
+
 
         db = new MyDB(this, "Events", null, 1);
     }
@@ -50,13 +63,21 @@ public class addEvent extends AppCompatActivity {
     public void insertInfo(View view) {
 
         String eventDay = date;
-        String start = timeStart.getText().toString();
-        String end = timeEnd.getText().toString();
+        String start = hourStart.getSelectedItem().toString();
+        String end = hourEnd.getSelectedItem().toString();
+        String start_ampm = Start_ampm.getSelectedItem().toString();
+        String end_ampm = End_ampm.getSelectedItem().toString();
+
+        //String start = timeStart.getText().toString();
+        //String end = timeEnd.getText().toString();
         String eventInfo = event.getText().toString();
-        String priorityInfo = priority.getText().toString();
 
 
-        db.insertEvent(eventDay, start, end, eventInfo, priorityInfo);
+        Log.d("check", start + " " + start_ampm + " " + end + " " + end_ampm + " " + eventInfo);
+
+
+
+        db.insertEvent(eventDay, start + " " + start_ampm , end + " " + end_ampm, eventInfo, "High priority");
 
         Toast.makeText(this, eventInfo + " data Entered!", Toast.LENGTH_LONG).show();
 
@@ -65,5 +86,6 @@ public class addEvent extends AppCompatActivity {
 
 
     }
+
 
 }

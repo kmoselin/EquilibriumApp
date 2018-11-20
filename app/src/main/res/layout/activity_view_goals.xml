@@ -19,26 +19,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
-
     <ListView
         android:id="@+id/goallist"
         android:layout_width="match_parent"
-        android:layout_height="335dp" />
+        android:layout_height="189dp" />
 
-
-    <ImageView
-        android:id="@+id/imgView"
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/progressChart"
         android:layout_width="match_parent"
-        android:layout_height="357dp"
-        android:contentDescription="DummyGoalProgress" />
+        android:layout_height="match_parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Self-Reflection"
-        android:onClick="downloadImage"
-        android:textSize="24sp" />
 
 </android.widget.LinearLayout>

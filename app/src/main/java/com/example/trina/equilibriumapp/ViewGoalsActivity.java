@@ -2,11 +2,11 @@ package com.example.trina.equilibriumapp;
 
 
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -14,24 +14,31 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import lecho.lib.hellocharts.model.PieChartData;
+import lecho.lib.hellocharts.model.SliceValue;
+import lecho.lib.hellocharts.view.PieChartView;
 
 public class ViewGoalsActivity extends AppCompatActivity {
 
     static ImageView imageView;
     ConnectivityManager connectivityManager;
     NetworkInfo networkInfo;
+
     MyDB db;
     ListView listview;
-    DownloadImage di;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_goals);
-        imageView = (ImageView) findViewById(R.id.imgView);
+
         connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         networkInfo = connectivityManager.getActiveNetworkInfo();
+
         db = new MyDB(this, "Goals", null, 1);
+
         listview = findViewById(R.id.goallist);
         ArrayList<String> infoList = new ArrayList<>();
 
@@ -47,13 +54,24 @@ public class ViewGoalsActivity extends AppCompatActivity {
             }
         }
 
+
+        PieChartView pieChartView = findViewById(R.id.progressChart);
+        List<SliceValue> pieData = new ArrayList<>();
+//        pieData.add(new SliceValue(15, Color.BLUE));
+//        pieData.add(new SliceValue(25, Color.GRAY));
+//        pieData.add(new SliceValue(10, Color.RED));
+//        pieData.add(new SliceValue(60, Color.MAGENTA));
+
+        pieData.add(new SliceValue(15, Color.YELLOW).setLabel("Q1: $10"));
+        pieData.add(new SliceValue(25, Color.GRAY).setLabel("Q2: $4"));
+        pieData.add(new SliceValue(10, Color.RED).setLabel("Q3: $18"));
+        pieData.add(new SliceValue(60, Color.MAGENTA).setLabel("Q4: $28"));
+
+        PieChartData pieChartData = new PieChartData(pieData);
+        pieChartData.setHasLabels(true).setValueLabelTextSize(14);
+        pieChartData.setHasCenterCircle(true).setCenterText1("Sales in million").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
+
+        pieChartView.setPieChartData(pieChartData);
     }
 
-    public void downloadImage(View view) {
-        if (networkInfo != null && networkInfo.isConnected()) {
-            di = new DownloadImage();
-            di.execute("https://cdn-images-1.medium.com/max/1198/1*DIq4u0PzaPtayrRnpFr0BA.png");
-        } else
-            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
 }
