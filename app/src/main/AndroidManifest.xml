@@ -35,6 +35,7 @@
         <activity android:name=".ViewSchedule" />
         <activity android:name=".SelfReflection" />
         <activity android:name=".timer" />
+        <activity android:name=".AddReflection" />
     </application>
 
 </manifest>

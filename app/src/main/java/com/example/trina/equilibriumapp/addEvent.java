@@ -42,7 +42,7 @@ public class addEvent extends AppCompatActivity {
 
         date = getIntent().getStringExtra("date");
 
-        dateText.setText(date);
+        dateText.setText(String.format("Date: %s", date));
        /* if(!date.matches("")){
             dateText.setText(date);
         }
@@ -50,12 +50,7 @@ public class addEvent extends AppCompatActivity {
             dateText.setText("No date selected");
         }*/
 
-
-
-
-
         event = findViewById(R.id.Event);
-
 
         db = new MyDB(this, "Events", null, 1);
     }
@@ -74,8 +69,6 @@ public class addEvent extends AppCompatActivity {
 
 
         Log.d("check", start + " " + start_ampm + " " + end + " " + end_ampm + " " + eventInfo);
-
-
 
         db.insertEvent(eventDay, start + " " + start_ampm , end + " " + end_ampm, eventInfo, "High priority");
 

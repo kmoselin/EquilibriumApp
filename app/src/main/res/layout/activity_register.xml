@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:padding="8dp"
     android:background="#FFF"
     >
 
@@ -28,7 +29,7 @@
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="100dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:background="@color/colorTeal"
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:background="@null"
-        android:text="Already a member?"
+        android:text="Already a member? Sign in"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary" />
 

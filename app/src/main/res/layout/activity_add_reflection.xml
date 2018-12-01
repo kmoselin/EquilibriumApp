@@ -5,21 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ViewSchedule">
+    tools:context=".AddReflection">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
+        android:text="My Reflections"
         android:background="@color/colorPrimaryGray"
-        android:text="Event Schedule"
         android:textColor="@android:color/primary_text_dark"
         android:textSize="24sp" />
 
     <ListView
-        android:id="@+id/eventList"
-        android:layout_width="wrap_content"
-        android:layout_height="500dp" />
+        android:id="@+id/reflectionList"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginBottom="20dp" />
+
 
 </android.widget.LinearLayout>

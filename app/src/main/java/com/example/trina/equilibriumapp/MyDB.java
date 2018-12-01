@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MyDB extends SQLiteOpenHelper{
@@ -35,7 +36,6 @@ public class MyDB extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " + TABLE_EVENT);
         db.execSQL("drop table if exists " + TABLE_GOAL);
-
         VERSION++;
         onCreate(db);
     }
@@ -48,21 +48,29 @@ public class MyDB extends SQLiteOpenHelper{
         cv.put("end_time", s3);
         cv.put("event", s4);
         cv.put("priority", s5);
-
-
         return db.insert(TABLE_EVENT, null, cv);
     }
 
     public long insertGoal(String s1, String s2, String s3, String s4){
         db = getWritableDatabase();
         ContentValues cv = new ContentValues();
-
         cv.put("goal", s1);
         cv.put("priority", s2);
         cv.put("type", s3);
         cv.put("completion", s4);
-
         return db.insert(TABLE_GOAL, null, cv);
+    }
+
+    public Cursor getIncompleteCount(){
+        db = getWritableDatabase();
+        Cursor cr = db.rawQuery("select completion from " + TABLE_GOAL + " where " + " completion " + " like '%Not complete%' " + ";", null);
+        return cr;
+    }
+
+    public Cursor getCompleteCount(){
+        db = getWritableDatabase();
+        Cursor cr = db.rawQuery("select completion from " + TABLE_GOAL + " where " + " completion " + " like '%finished%' " + ";", null);
+        return cr;
     }
 
     public void getAll(){
@@ -78,7 +86,6 @@ public class MyDB extends SQLiteOpenHelper{
 
     public Cursor getAllEvents(){
         db = getWritableDatabase();
-
         Cursor cr = db.rawQuery("select * from " + TABLE_EVENT + ";", null );
         return cr;
     }
@@ -123,7 +130,6 @@ public class MyDB extends SQLiteOpenHelper{
         db = getWritableDatabase();
         Cursor cr = db.rawQuery("select start_time, end_time, event, priority from " + TABLE_EVENT + ";", null);
         return cr;
-
     }
 }
 

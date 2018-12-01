@@ -10,24 +10,24 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Self Reflection Page"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="8dp"
+        android:text="What's on your mind?"
+        android:background="@color/colorPrimaryGray"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="293dp"
         android:ems="10"
+        android:hint="write and reflect on anything you want here"
         android:inputType="textPersonName"
-        android:text="Feelings" />
+        android:textStyle="italic" />
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="71dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -50,7 +50,26 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="30sp" />
-
     </RadioGroup>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorBlue"
+        android:text="Save Reflection"
+        android:onClick="saveReflection"
+        android:textColor="@android:color/primary_text_dark" />
+
+    <Button
+        android:id="@+id/viewReflections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewReflections"
+        android:background="@color/materialOrange"
+        android:text="View My Reflections"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/primary_text_dark" />
 
 </android.widget.LinearLayout>

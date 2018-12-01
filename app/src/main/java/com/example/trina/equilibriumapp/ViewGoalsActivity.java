@@ -21,10 +21,12 @@ import lecho.lib.hellocharts.model.SliceValue;
 import lecho.lib.hellocharts.view.PieChartView;
 
 public class ViewGoalsActivity extends AppCompatActivity {
+    int incompleteCount = 0;
+    int completeCount = 0;
 
     static ImageView imageView;
-    ConnectivityManager connectivityManager;
-    NetworkInfo networkInfo;
+//    ConnectivityManager connectivityManager;
+//    NetworkInfo networkInfo;
 
     MyDB db;
     ListView listview;
@@ -34,8 +36,8 @@ public class ViewGoalsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_goals);
 
-        connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-        networkInfo = connectivityManager.getActiveNetworkInfo();
+//        connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+//        networkInfo = connectivityManager.getActiveNetworkInfo();
 
         db = new MyDB(this, "Goals", null, 1);
 
@@ -54,23 +56,33 @@ public class ViewGoalsActivity extends AppCompatActivity {
             }
         }
 
+        populateChart();
+    }
 
+    public void populateChart(){
         PieChartView pieChartView = findViewById(R.id.progressChart);
         List<SliceValue> pieData = new ArrayList<>();
-//        pieData.add(new SliceValue(15, Color.BLUE));
-//        pieData.add(new SliceValue(25, Color.GRAY));
-//        pieData.add(new SliceValue(10, Color.RED));
-//        pieData.add(new SliceValue(60, Color.MAGENTA));
 
-        pieData.add(new SliceValue(15, Color.YELLOW).setLabel("Q1: $10"));
-        pieData.add(new SliceValue(25, Color.GRAY).setLabel("Q2: $4"));
-        pieData.add(new SliceValue(10, Color.RED).setLabel("Q3: $18"));
-        pieData.add(new SliceValue(60, Color.MAGENTA).setLabel("Q4: $28"));
+        Cursor incomplete = db.getIncompleteCount();
+        Cursor completed = db.getCompleteCount();
+
+        while(incomplete.moveToNext()){
+            incompleteCount++;
+        }
+        while (completed.moveToNext()){
+            completeCount++;
+        }
+        pieData.add(new SliceValue(incompleteCount,Color.parseColor("#0097A7")).setLabel("Incomplete: "+ incompleteCount + " goals"));
+        pieData.add(new SliceValue(completeCount,Color.parseColor("#ffd364")).setLabel("Completed: "+ completeCount + " goals"));
+
+//        pieData.add(new SliceValue(15, Color.YELLOW).setLabel("Q1: $10"));
+//        pieData.add(new SliceValue(25, Color.GRAY).setLabel("Q2: $4"));
+//        pieData.add(new SliceValue(10, Color.RED).setLabel("Q3: $18"));
+//        pieData.add(new SliceValue(60, Color.MAGENTA).setLabel("Q4: $28"));
 
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true).setValueLabelTextSize(14);
-        pieChartData.setHasCenterCircle(true).setCenterText1("Sales in million").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
-
+        pieChartData.setHasCenterCircle(true).setCenterText1("My Goals").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#5e6590"));
         pieChartView.setPieChartData(pieChartData);
     }
 

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     android:background="#FFF">
 
 
@@ -10,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="93dp">
+        android:layout_marginTop="85dp">
 
         <EditText
             android:id="@+id/Email"
@@ -27,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="157dp">
+        android:layout_marginTop="150dp">
 
         <EditText
             android:id="@+id/Password"
@@ -46,8 +47,8 @@
         android:layout_height="20dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="210dp"
         android:background="@null"
         android:gravity="left"
         android:text="forgot password?"
@@ -69,7 +70,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:background="#20ad93"
-            android:text="Login"
+            android:text="Log in"
             android:textAllCaps="true"
             android:textColor="#FFFF" />
 
@@ -80,7 +81,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorTeal"
-            android:text="Register!"
+            android:text="Register"
             android:textColor="#FFFF" />
     </LinearLayout>
 
@@ -90,7 +91,7 @@
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="161dp" />
+        android:layout_marginBottom="149dp" />
 
 
 

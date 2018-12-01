@@ -57,6 +57,10 @@
         <item>Am</item>
         <item>Pm</item>
     </string-array>
+    <string name="title_activity_pie_chart__list_view">PieChart_ListView</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 
 </resources>

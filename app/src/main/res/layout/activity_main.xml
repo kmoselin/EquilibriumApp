@@ -12,17 +12,13 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="EQUILIBRIUM"
-        android:textSize="30dp" />
-
-
-    <ImageView
-        android:layout_width="95dp"
-        android:layout_height="92dp"
-        android:layout_below="@+id/title"
-        android:layout_marginBottom="45dp"
-        android:background="@drawable/icon" />
+        android:text="Equilibrium"
+        android:typeface="serif"
+        android:textSize="40dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="italic|bold"
+        android:layout_marginBottom="40dp"
+         />
 
 
     <Button
