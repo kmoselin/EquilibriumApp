@@ -63,7 +63,7 @@ public class MyDB extends SQLiteOpenHelper{
 
     public Cursor getIncompleteCount(){
         db = getWritableDatabase();
-        Cursor cr = db.rawQuery("select completion from " + TABLE_GOAL + " where " + " completion " + " like '%Not complete%' " + ";", null);
+        Cursor cr = db.rawQuery("select completion from " + TABLE_GOAL + " where " + " completion " + " like '%In Progress%' " + ";", null);
         return cr;
     }
 

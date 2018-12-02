@@ -58,7 +58,7 @@ public class AddGoalActivity extends AppCompatActivity {
             pr = "Not specified";
         }
         String type = typeOfGoal.getText().toString();
-        String Completed = "Not completed";
+        String Completed = "In Progress";
 
         if(goalInput.matches("")){
             Toast.makeText(this, "Enter your goal!", Toast.LENGTH_SHORT).show();

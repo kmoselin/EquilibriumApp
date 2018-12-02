@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ViewGoalsActivity">
+    tools:context=".ShowProgressActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:text="Goals and Status Information"
         android:background="@color/colorPrimaryGray"
-        android:textColor="@android:color/primary_text_dark"
         android:padding="8dp"
+        android:text="Progress Information"
+        android:textColor="@android:color/primary_text_dark"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,21 +22,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ListView
-        android:id="@+id/goallist"
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/progressChart"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginBottom="@dimen/fab_margin"/>
-
-    <Button
-        android:id="@+id/viewStatusInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="viewProgress"
-        android:text="View Progress Chart"
-        android:background="@color/materialOrange"
-        android:textColor="@android:color/primary_text_dark"
-        />
-
+        android:layout_height="match_parent"
+        android:padding="10dp" />
 
 </android.widget.LinearLayout>
