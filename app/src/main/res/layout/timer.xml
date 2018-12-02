@@ -1,73 +1,137 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:progress="0"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Timer"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Timer"
+        android:id="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/progressBar" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/seconds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Complete a simple breathing exercise to relax and reduce stress."
-        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="00"
+        android:textColor="@android:color/white"
         android:textSize="20dp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/enterSeconds"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Seconds"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/enterMinutes"
+            android:paddingBottom="@dimen/activity_horizontal_margin" />
+    <EditText
+        android:id="@+id/enterHours"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/stopButton"
+        android:gravity="center"
+        android:hint="Hours"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorTeal"
-        android:drawableLeft="@drawable/baseline_play_arrow_white_18dp"
-        android:paddingLeft="@dimen/fab_margin"
-        android:text="Start"
-        android:textColor="@android:color/primary_text_dark" />
-
-    <Button
-        android:id="@+id/stopButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/restartButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorBlue"
-        android:drawableLeft="@drawable/baseline_stop_white_18dp"
-        android:paddingLeft="@dimen/fab_margin"
-        android:text="Stop"
-        android:textColor="@android:color/primary_text_dark" />
-
-    <Button
-        android:id="@+id/restartButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/materialOrange"
-        android:drawableLeft="@drawable/baseline_replay_white_18dp"
-        android:paddingLeft="@dimen/fab_margin"
-        android:text="Restart"
-        android:textColor="@android:color/primary_text_dark" />
-
-
-    <Chronometer
-        android:id="@+id/simpleChronometer"
+        android:layout_toLeftOf="@id/enterMinutes"
+        android:paddingBottom="@dimen/activity_horizontal_margin" />
+        <EditText
+            android:id="@+id/enterMinutes"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:hint="Minutes"
+            android:paddingBottom="@dimen/activity_horizontal_margin" />
+    <TextView
+        android:id="@+id/viewHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:text="00"
+        android:layout_toLeftOf="@id/viewMinutes"
+        android:layout_below="@id/button"
+        android:textSize="20sp"
+        android:layout_marginRight="40dp"/>
+    <TextView
+        android:id="@+id/hoursTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H"
+        android:layout_below="@id/viewHours"
+        android:layout_alignLeft="@+id/viewHours"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/viewMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="115dp"
-        android:gravity="center"
-        android:padding="10dp"
-        android:textColor="@color/colorDarkGray"
-        android:textStyle="bold" />
+        android:layout_below="@id/button"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp" />
+    <TextView
+    android:id="@+id/minutesTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="M"
+    android:layout_below="@id/viewMinutes"
+    android:layout_alignLeft="@+id/viewMinutes"
+    android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/viewSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/viewMinutes"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/button" />
+    <TextView
+        android:id="@+id/secondsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S"
+        android:layout_below="@id/viewSeconds"
+        android:layout_alignLeft="@+id/viewSeconds"
+        android:textSize="20sp"/>
+
+
+
+
+
 
 </RelativeLayout>
